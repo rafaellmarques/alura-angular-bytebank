@@ -1,0 +1,25 @@
+<section class="section">
+  <div class="container">
+    <h2 class="titulo">Transferências</h2>
+    <table class="tabela">
+      <thead class="tabela__cabecalho">
+        <th class="tabela__cabecalho__conteudo">Data</th>
+        <th class="tabela__cabecalho__conteudo">Valor</th>
+        <th class="tabela__cabecalho__conteudo">Destino</th>
+      </thead>
+      <tbody>
+        <tr class=" tabela__linha" *ngFor="let transfer of transfers">
+          <td class="tabela__conteudo">{{transfer?.data | date: "short"}}</td>
+          <td class="tabela__conteudo">{{transfer?.valor | currency}}</td>
+          <td class="tabela__conteudo">{{transfer?.destino}}</td>
+        </tr>
+      </tbody>
+      <tfoot></tfoot>
+    </table>
+  </div>
+</section>
+<section *ngIf="!transfers?.length">
+  <div class="container">
+    <p>Nenhuma transferência foi realizada!</p>
+  </div>
+</section>

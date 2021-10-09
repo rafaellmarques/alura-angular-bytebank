@@ -1,0 +1,42 @@
+.titulo {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.tabela {
+  background-color: white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  text-align: center;
+
+  &__cabecalho {
+    color: var(--primary);
+
+    &__conteudo {
+      border-bottom: 2px solid green;
+      padding: 10px;
+
+      &:first-child {
+        width: 100%;
+      }
+    }
+  }
+
+  &__linha {
+    border-radius: 4px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      .tabela__conteudo {
+        border-bottom: none;
+        min-width: 80px;
+      }
+    }
+  }
+
+  &__conteudo {
+    border-bottom: 1px solid var(--cinza-claro);
+    padding: 10px;
+  }
+}
